@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
   font-family: Apple Chancery, cursive;
@@ -8,12 +9,45 @@ body, html {
   background-color: #666;
 }
 
-.container, h1 {
+.container,
+h1 {
   width: 80%;
   max-width: 600px;
   min-width: 400px;
   padding: 10px;
   margin: 10px auto;
+}
+
+/* create a column class! make sure all of the divs within 'container's have a class of 'column' */
+.col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  height: 600px;
+  align-items: center;
+}
+
+/* create your tile classes! we recommend .small .med .large */
+.small {
+  width: 98%;
+  height: auto;
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.medium {
+  width: 98%;
+  height: auto;
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.large {
+  width: 98%;
+  height: auto;
+  grid-column: span 3;
+  grid-row: span 3;
 }
 
 h4 {
@@ -30,22 +64,21 @@ img:hover {
 
 .amiable {
   border: 1px solid #22aa44;
-  box-shadow:  -1px 1px #22aa44, -2px 2px #22aa44, -3px 3px #22aa44, -4px 4px #22aa44, -5px 5px #22aa44;
+  box-shadow: -1px 1px #22aa44, -2px 2px #22aa44, -3px 3px #22aa44,
+    -4px 4px #22aa44, -5px 5px #22aa44;
   background-color: #44cc66;
 }
 
 .indifferent {
   border: 1px solid #aaaa00;
-  box-shadow:  -1px 1px #aaaa00, -2px 2px #aaaa00, -3px 3px #aaaa00, -4px 4px #aaaa00, -5px 5px #aaaa00;
+  box-shadow: -1px 1px #aaaa00, -2px 2px #aaaa00, -3px 3px #aaaa00,
+    -4px 4px #aaaa00, -5px 5px #aaaa00;
   background-color: #dddd22;
 }
 
 .dubious {
   border: 1px solid #aa2222;
-  box-shadow: -1px 1px #aa2222, -2px 2px #aa2222, -3px 3px #aa2222, -4px 4px #aa2222, -5px 5px #aa2222;
+  box-shadow: -1px 1px #aa2222, -2px 2px #aa2222, -3px 3px #aa2222,
+    -4px 4px #aa2222, -5px 5px #aa2222;
   background-color: #dd4444;
 }
-
-/* create a column class! make sure all of the divs within 'container's have a class of 'column' */
-
-/* create your tile classes! we recommend .small .med .large */
